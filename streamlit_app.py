@@ -18,6 +18,9 @@ import os
 print("Current Working Directory:", os.getcwd())
 print("Files in Current Directory:", os.listdir())
 
+# Suppress the warning related to st.pyplot()
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 # Load the model
 model_path = "best_model2.pkl"
 loaded_model = joblib.load(model_path)
